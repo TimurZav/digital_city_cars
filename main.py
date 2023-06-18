@@ -1,5 +1,5 @@
 from artist import *
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
 
 app: Flask = Flask(__name__)
@@ -18,7 +18,7 @@ def get_map():
         'serialize': False
     }
     main(**default_args)
-    return True
+    return jsonify({"is_files_to_dir": True})
 
 
 if __name__ == "__main__":
