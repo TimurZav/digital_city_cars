@@ -5,7 +5,6 @@ graphml_files
 *.stats
 *_frames/
 *.html
-*.txt
 __pycache__
 cache
 frames
