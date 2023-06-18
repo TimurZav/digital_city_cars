@@ -3,7 +3,7 @@ import navigation as nav
 
 class Animator:
     def __init__(self, fig, ax, cars_object, lights_object, num,
-                 frame_rate=1000, dt=1 / 1000, n=1, focus=None, write_frames=False):
+                 frame_rate=1000, dt=1 / 1000, n=5, focus=None, write_frames=False):
         self.fig = fig
         self.ax = ax
         self.num = num

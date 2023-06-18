@@ -8,8 +8,8 @@ from osm_request import OGraph
 
 # argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('-l', '--location', type=str, default="Upper West Side, Manhattan, New York City, New York, USA")
-parser.add_argument('-c', '--cars', type=int, default=50)
+parser.add_argument('-l', '--location', type=str, default="Краснодарский")
+parser.add_argument('-c', '--cars', type=int, default=10)
 parser.add_argument('-dt', type=float, default=1/1000)
 parser.add_argument('-x', '--agent', type=int, default=17)
 parser.add_argument('-e', '--episodes', type=int, default=40)
@@ -17,8 +17,8 @@ parser.add_argument('-a', '--animate', action='store_true')
 
 
 def main(
-        location="Upper West Side, Manhattan, New York City, New York, USA",
-        cars=50,
+        location="Краснодарский",
+        cars=10,
         dt=1/1000,
         agent=17,
         num_episodes=40,

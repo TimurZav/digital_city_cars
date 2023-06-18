@@ -57,7 +57,7 @@ class OGraph:
         """
         # project and plot
         graph = ox.project_graph(self.init_graph)
-        fig, ax = ox.plot_graph(graph, node_size=0, edge_linewidth=0.5,
+        fig, ax = ox.plot_graph(graph, node_size=0, figsize=(8, 8), edge_linewidth=0.5,
                                 show=True if self.preview else False,
                                 bgcolor='#FFFFFF')
         # set the axis title and grab the dimensions of the figure

@@ -106,33 +106,12 @@ def main(
                                       frames=tqdm(range(n_frames), file=sys.stdout),
                                       interval=duration,
                                       blit=True)
-        mywriter = animation.HTMLWriter(fps=frames_per_second)
-        ani.save(f'traffic_{dt.today().strftime("%Y_%m_%d")}.html', writer=mywriter)
+        my_writer = animation.HTMLWriter(fps=frames_per_second)
+        ani.save('traffic.html', writer=my_writer)
     else:
         # for creating mp4 movies
         ani = animation.FuncAnimation(graph.fig, animate, init_func=init, frames=n_frames)
-        mywriter = animation.FFMpegWriter(fps=frames_per_second)
-        ani.save(f'traffic_{dt.today().strftime("%Y_%m_%d")}.mp4', writer=mywriter)
+        my_writer = animation.FFMpegWriter(fps=frames_per_second)
+        ani.save('traffic.mp4', writer=my_writer)
 
     return
-
-
-if __name__ == '__main__':
-
-    args = parser.parse_args()
-    default_args = {
-        'location': "West Village, Manhattan",
-        'cars': 50,
-        'duration': 10,
-        'frames_per_second': 60,
-        'interactive': False,
-        'light_prescaling': 15,
-        'mp4': False,
-        'serialize': False
-    }
-    provided_args = {
-        key: args.__getattribute__(key) if args.__getattribute__(key) is not None else default_args[key]
-        for key in vars(args)
-    }
-    main(**provided_args)
-
