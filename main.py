@@ -11,7 +11,7 @@ def get_map():
         'location': "Западный округ",
         'cars': 10,
         'duration': 10,
-        'frames_per_second': 60,
+        'frames_per_second': 30,
         'interactive': False,
         'light_prescaling': 15,
         'mp4': False,
